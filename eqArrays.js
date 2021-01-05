@@ -12,7 +12,6 @@ const eqArrays = function(first, second) {
     // then check each element equal to each other
     for (let i = 0; i < first.length; i++) {
       if (first[i] !== second[i]) {
-        console.log(i);
         return false;
       }
     }
