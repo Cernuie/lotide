@@ -7,6 +7,8 @@ const eqArrays = function(first, second) {
         return false;
       }
     }
+  } else {
+    return false;
   }
   return true;
 };
@@ -18,9 +20,9 @@ const assertArraysEqual = function(first, second) {
   } else {
     console.log(`❌ Assertion failed: [${first}] !== [${second}]`);
   }
-}
+};
 
 assertArraysEqual([1,2], [1,2]);
 assertArraysEqual([1,3], [1,2]);
-assertArraysEqual(['string1', 'string2'], ['string1', 'string2'])
-assertArraysEqual(['string', 'string1'], ['string1', 'string2'])
+assertArraysEqual(['string1', 'string2'], ['string1', 'string2']);
+assertArraysEqual(['string', 'string1'], ['string1', 'string2']);
