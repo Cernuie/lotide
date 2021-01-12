@@ -1,0 +1,27 @@
+{
+  "name": "@cernuie/lotide",
+  "version": "1.0.1",
+  "description": "A mini clone of the [Lodash](https://lodash.com) library.",
+  "main": "assertArraysEqual.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cernuie/lotide.git"
+  },
+  "author": "Alexander Nguyen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cernuie/lotide/issues"
+  },
+  "homepage": "https://github.com/Cernuie/lotide#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1"
+  },
+  "dependencies": {}
+}

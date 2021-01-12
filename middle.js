@@ -1,26 +1,4 @@
-const eqArrays = function(first, second) {
-  //first check length
-  if (first.length === second.length) {
-    // then check each element equal to each other
-    for (let i = 0; i < first.length; i++) {
-      if (first[i] !== second[i]) {
-        return false;
-      }
-    }
-  } else {
-    return false;
-  }
-  return true;
-};
-
-const assertArraysEqual = function(first, second) {
-  //check if arrays are equal or not
-  if (eqArrays(first, second)) {
-    console.log(`✅ Assertion passed: [${first}] === [${second}]`);
-  } else {
-    console.log(`❌ Assertion failed: [${first}] !== [${second}]`);
-  }
-};
+const assertArraysEqual = require('./assertArraysEqual');
 
 const findIndexOfMid = function(array) {
   //return correct index of middle in array
@@ -48,7 +26,4 @@ const middle = function(array) {
   }
 };
 
-assertArraysEqual([], []);
-assertArraysEqual(middle([1,2,3]), [2]);
-assertArraysEqual(middle([1,2,3,4,5,6]), [3,4]);
-assertArraysEqual(middle(['1','2','3','4','5']), ['3']);
+module.exports = middle

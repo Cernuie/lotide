@@ -6,29 +6,9 @@ const reverseString = function(input) {
   return newstring;
 };
 
-const eqArrays = function(first, second) {
-  //first check length
-  if (first.length === second.length) {
-    // then check each element equal to each other
-    for (let i = 0; i < first.length; i++) {
-      if (first[i] !== second[i]) {
-        return false;
-      }
-    }
-  } else {
-    return false;
-  }
-  return true;
-};
+const eqArrays = require('./eqArrays');
 
-const assertArraysEqual = function(first, second) {
-  //check if arrays are equal or not
-  if (eqArrays(first, second)) {
-    console.log(`✅ Assertion passed: [${first}] === [${second}]`);
-  } else {
-    console.log(`❌ Assertion failed: [${first}] !== [${second}]`);
-  }
-};
+const assertArraysEqual = require('./assertArraysEqual')
 
 const words = ["ground", "control", "to", "major", "tom"];
 const words1 = ["abcd", "efgh"];
@@ -42,7 +22,9 @@ const map = function(array, callback) {
   return results;
 }
 
+module.exports = map;
 
+/* tests
 const results1 = map(words, word => word[0]);
 const results2 = map(words, words => words.length);
 const results3 = map(words1, words1 => reverseString(words1));
@@ -52,3 +34,4 @@ assertArraysEqual(results1, ['g','c','t','m','t']);
 assertArraysEqual(results2, [6,7,2,5,3]);
 assertArraysEqual(results3, ['dcba', 'hgfe']);
 assertArraysEqual(results4, [6,12,18,24]);
+*/

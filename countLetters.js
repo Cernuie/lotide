@@ -20,6 +20,7 @@ const countLetters = function(string) {
   return stringObject;
 };
 
+module.exports = countLetters
 
 //i dont want to assertEqual to all of the keys in the output >:(
 console.log(countLetters("lighthouse is cool 123"));
